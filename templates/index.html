@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasifikasi Bunga Iris</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Klasifikasi Bunga Iris</h1>
+            <p class="subtitle">Masukkan data bunga untuk mendapatkan prediksi</p>
+        </div>
+
+        <div class="form-container">
+            <form method="POST">
+                <div class="input-group">
+                    <div class="input-content">
+                        <label>Sepal Length (cm)</label>
+                        <input type="number" step="any" name="sepal_length" placeholder="4.0 - 8.0" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-content">
+                        <label>Sepal Width (cm)</label>
+                        <input type="number" step="any" name="sepal_width" placeholder="2.0 - 4.5" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-content">
+                        <label>Petal Length (cm)</label>
+                        <input type="number" step="any" name="petal_length" placeholder="1.0 - 7.0" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-content">
+                        <label>Petal Width (cm)</label>
+                        <input type="number" step="any" name="petal_width" placeholder="0.1 - 2.5" required>
+                    </div>
+                </div>
+
+                <button type="submit">
+                    Klasifikasi
+                </button>
+            </form>
+        </div>
+        
+
+        {% if prediction %}
+            <div class="result">
+                <div class="result-icon">
+                    <i class="fas fa-flower"></i>
+                </div>
+                <div class="result-content">
+                    <h3>Hasil Prediksi:</h3>
+                    <p class="prediction-text">{{ prediction }}</p>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="info-section">
+            <h3><i class="fas fa-info-circle"></i> Tentang Dataset Iris</h3>
+            <div class="iris-types">
+                <div class="iris-type">
+                    <span class="color-dot setosa"></span>
+                    <span>Setosa</span>
+                </div>
+                <div class="iris-type">
+                    <span class="color-dot versicolor"></span>
+                    <span>Versicolor</span>
+                </div>
+                <div class="iris-type">
+                    <span class="color-dot virginica"></span>
+                    <span>Virginica</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

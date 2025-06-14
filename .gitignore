@@ -1,0 +1,86 @@
+# File Python yang sudah dikompilasi
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env
+
+# File log
+*.log
+logs/
+
+# File sementara
+*.tmp
+*.temp
+temp/
+tmp/
+
+# File backup
+*.bak
+*.backup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# File arsip
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# API keys dan secrets
+secrets.json
+api_keys.txt
+.env.local
+.env.production
+
+# File konfigurasi lokal
+config.ini
+settings.json
+local_config.py
+
+# Cache
+.cache/
+cache/
+
+# Node modules (jika ada)
+node_modules/
+npm-debug.log*
+
+# File model (opsional - hapus # jika tidak ingin commit)
+# model_knn.pkl
+# scaler.pkl
+
+# Dataset (opsional - hapus # jika tidak ingin commit)
+# IRIS.csv 
